@@ -6,7 +6,10 @@ $sent = false;
 $errors = [];
 $form = ['naam' => '', 'email' => '', 'telefoon' => '', 'bericht' => ''];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// Bij een statische build (GitHub Pages) is er geen PHP: formulier wordt een e-mailknop.
+$isStatic = defined('STATIC_BUILD');
+
+if (!$isStatic && $_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($form as $key => $_) {
         $form[$key] = trim($_POST[$key] ?? '');
     }
@@ -76,6 +79,15 @@ require __DIR__ . '/includes/header.php';
 
         <div class="contact-form">
             <h2 class="display">Stuur een bericht</h2>
+            <?php if ($isStatic): ?>
+                <p class="lead">Wij ontvangen uw bericht graag per e-mail of telefoon.</p>
+                <p>
+                    <a class="btn btn-dark" href="mailto:<?= e(CONTACT['email']) ?>?subject=Contactaanvraag%20via%20studiovendrig.nl">
+                        E-mail ons: <?= e(CONTACT['email']) ?>
+                    </a>
+                </p>
+                <p>Of bel <strong><?= e(CONTACT['telefoon']) ?></strong>.</p>
+            <?php else: ?>
             <?php if ($sent): ?>
                 <div class="form-success">
                     <p><strong>Bedankt voor uw bericht!</strong> Wij nemen zo spoedig mogelijk contact met u op.</p>
@@ -103,6 +115,7 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <button type="submit" class="btn btn-dark">Verstuur bericht</button>
             </form>
+            <?php endif; ?>
         </div>
     </div>
 </section>
