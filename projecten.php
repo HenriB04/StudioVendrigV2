@@ -1,16 +1,19 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 $pageTitle = 'Projecten';
+$bodyClass = 'page-projecten';
 $categories = project_categories();
 $filter = $_GET['categorie'] ?? 'alle';
+$totaal = count(projects());
 require __DIR__ . '/includes/header.php';
 ?>
 
-<section class="page-hero">
+<section class="page-hero projecten-hero">
     <div class="container">
-        <p class="kicker">Portfolio</p>
-        <h1 class="display-xl">Projecten</h1>
-        <p class="lead">Een overzicht van door Studio Vendrig gerealiseerde en lopende projecten.</p>
+        <p class="kicker">Portfolio &mdash; <?= $totaal ?> projecten</p>
+        <h1 class="display-xl">Projecten<span class="hero-dot-mark">.</span></h1>
+        <p class="lead">Een overzicht van door Studio Vendrig gerealiseerde en lopende projecten,
+        geordend per discipline.</p>
     </div>
 </section>
 
@@ -26,21 +29,23 @@ require __DIR__ . '/includes/header.php';
 
         <?php foreach ($categories as $cat => $items): ?>
             <?php if ($filter !== 'alle' && $filter !== $cat) continue; ?>
-            <div class="category-block">
-                <h2 class="category-title"><span><?= e($cat) ?></span></h2>
-                <div class="project-grid">
+            <div class="cat-ledger">
+                <div class="cat-ledger-head reveal">
+                    <span class="cat-ledger-count"><?= str_pad((string)count($items), 2, '0', STR_PAD_LEFT) ?></span>
+                    <h2><?= e($cat) ?></h2>
+                </div>
+                <div class="proj-index">
                     <?php foreach ($items as $i => $p): ?>
-                    <a class="project-card reveal" href="project.php?id=<?= $p['id'] ?>">
-                        <div class="project-card-img">
+                    <a class="proj-row reveal" href="project.php?id=<?= $p['id'] ?>">
+                        <span class="proj-row-num"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></span>
+                        <span class="proj-row-thumb">
                             <?php if ($p['images']): ?>
                                 <img src="<?= e($p['images'][0]['file']) ?>" alt="<?= e($p['title']) ?>" loading="lazy">
                             <?php endif; ?>
-                        </div>
-                        <div class="project-card-body">
-                            <span class="project-card-cat"><?= e($cat) ?></span>
-                            <h3><?= e($p['title']) ?></h3>
-                            <span class="project-card-num"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></span>
-                        </div>
+                        </span>
+                        <span class="proj-row-title"><?= e($p['title']) ?></span>
+                        <span class="proj-row-cat"><?= e($cat) ?></span>
+                        <span class="proj-row-arrow" aria-hidden="true">&rarr;</span>
                     </a>
                     <?php endforeach; ?>
                 </div>

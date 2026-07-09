@@ -14,8 +14,9 @@ if (!$project) {
 }
 
 $pageTitle = $project['title'];
+$bodyClass = 'page-project';
 if ($project['images']) {
-    $bodyClass = 'has-dark-hero';
+    $bodyClass .= ' has-dark-hero';
 }
 require __DIR__ . '/includes/header.php';
 ?>
@@ -37,30 +38,37 @@ require __DIR__ . '/includes/header.php';
 </section>
 <?php endif; ?>
 
-<section class="section">
-    <div class="container project-detail">
-        <div class="project-info">
-            <?php if (trim($project['description']) !== ''): ?>
-                <div class="rich-text"><?= $project['description'] ?></div>
-            <?php else: ?>
-                <div class="rich-text">
-                    <p><em>Dit project is momenteel in uitvoering. Meer informatie volgt binnenkort.</em></p>
-                </div>
-            <?php endif; ?>
-            <a class="link-arrow back" href="projecten.php">Terug naar projecten</a>
-        </div>
-
-        <?php if ($project['images']): ?>
-        <div class="project-gallery">
-            <?php foreach ($project['images'] as $i => $img): ?>
-            <figure class="gallery-item reveal">
-                <a href="<?= e($img['file']) ?>" class="gallery-link">
-                    <img src="<?= e($img['file']) ?>" alt="<?= e($img['name']) ?>" loading="lazy">
-                </a>
-            </figure>
-            <?php endforeach; ?>
-        </div>
+<section class="section project-article">
+    <div class="container measure">
+        <?php if (trim($project['description']) !== ''): ?>
+            <div class="rich-text"><?= $project['description'] ?></div>
+        <?php else: ?>
+            <div class="rich-text">
+                <p><em>Dit project is momenteel in uitvoering. Meer informatie volgt binnenkort.</em></p>
+            </div>
         <?php endif; ?>
+    </div>
+</section>
+
+<?php if ($project['images']): ?>
+<section class="project-plates">
+    <?php foreach ($project['images'] as $i => $img): ?>
+    <figure class="plate plate-<?= $i % 3 ?> reveal">
+        <a href="<?= e($img['file']) ?>" class="gallery-link">
+            <img src="<?= e($img['file']) ?>" alt="<?= e($img['name']) ?>" loading="lazy">
+        </a>
+        <figcaption>
+            <span class="plate-cap-name"><?= e($img['name']) ?></span>
+            <span class="plate-cap-num"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?> / <?= str_pad((string)count($project['images']), 2, '0', STR_PAD_LEFT) ?></span>
+        </figcaption>
+    </figure>
+    <?php endforeach; ?>
+</section>
+<?php endif; ?>
+
+<section class="section project-foot">
+    <div class="container">
+        <a class="link-arrow back" href="projecten.php">Terug naar projecten</a>
     </div>
 </section>
 

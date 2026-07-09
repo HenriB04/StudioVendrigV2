@@ -777,3 +777,463 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
     .footer-grid { grid-template-columns: 1fr; }
     .hero-count { display: none; }
 }
+
+/* ==========================================================================
+   PAGINA-SPECIFIEKE LAY-OUTS
+   Elke pagina heeft een eigen opbouw; het palet (houtskool, papier, koper)
+   en de fonts (Fraunces + Manrope) blijven overal gelijk.
+   ========================================================================== */
+
+/* Smalle leeskolom, hergebruikt op enkele pagina's */
+.container.measure { width: min(720px, 92vw); }
+
+.link-arrow.on-dark { color: var(--paper); }
+.link-arrow.on-dark:hover { color: var(--copper-soft); }
+
+.hero-dot-mark { color: var(--copper); }
+
+/* --------------------------------------------------------------------------
+   PROJECTEN — editorial index (genummerde ledger i.p.v. kaartraster)
+   -------------------------------------------------------------------------- */
+
+.cat-ledger { margin-bottom: 4.5rem; }
+.cat-ledger-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.4rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: .5rem;
+}
+.cat-ledger-count {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--copper);
+}
+.cat-ledger-head h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+
+.proj-row {
+    display: grid;
+    grid-template-columns: 3.5rem 108px 1fr auto 2rem;
+    align-items: center;
+    gap: 1.8rem;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    transition: padding-left .3s ease, background .3s ease;
+}
+.proj-row:hover { padding-left: 1.2rem; background: var(--paper-tint); }
+.proj-row-num {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+.proj-row:hover .proj-row-num { color: var(--copper); }
+.proj-row-thumb {
+    width: 108px; height: 72px;
+    overflow: hidden;
+    background: var(--paper-tint);
+    display: block;
+}
+.proj-row-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(35%);
+    transition: transform .6s cubic-bezier(.2,.6,.2,1), filter .5s;
+}
+.proj-row:hover .proj-row-thumb img { transform: scale(1.08); filter: none; }
+.proj-row-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 1.9vw, 1.5rem);
+    line-height: 1.25;
+    transition: color .25s;
+}
+.proj-row:hover .proj-row-title { color: var(--copper); }
+.proj-row-cat {
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+}
+.proj-row-arrow {
+    font-size: 1.2rem;
+    color: var(--copper);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity .3s, transform .3s;
+}
+.proj-row:hover .proj-row-arrow { opacity: 1; transform: none; }
+
+/* --------------------------------------------------------------------------
+   PROJECT-DETAIL — leesartikel + gestaffelde 'platen'-galerij
+   -------------------------------------------------------------------------- */
+
+.project-article { padding-bottom: 2rem; }
+.project-plates {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding: 1rem 0 2rem;
+}
+.plate {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+}
+/* Wisselende breedtes en uitlijning geven ritme aan de galerij */
+.plate-0 { width: min(900px, 92vw); }
+.plate-1 { width: min(1180px, 94vw); }
+.plate-2 { width: min(760px, 92vw); margin-right: max((100vw - 1180px) / 2, 4vw); }
+.plate .gallery-link { display: block; overflow: hidden; cursor: zoom-in; }
+.plate img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(.2,.6,.2,1);
+}
+.plate-1 img { aspect-ratio: 16 / 9; }
+.plate .gallery-link:hover img { transform: scale(1.03); }
+.plate figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-top: .8rem;
+    padding-top: .6rem;
+    border-top: 1px solid var(--line);
+}
+.plate-cap-name { font-style: italic; font-family: var(--font-display); color: var(--ink-soft); }
+.plate-cap-num {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    color: var(--copper);
+    white-space: nowrap;
+}
+.project-foot { padding-top: 1rem; }
+
+/* --------------------------------------------------------------------------
+   STUDIO — statement-quote, asymmetrische kolommen, lichte knowhow-lijst
+   -------------------------------------------------------------------------- */
+
+.studio-statement { padding-bottom: 1rem; }
+.studio-quote {
+    position: relative;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(2rem, 5.2vw, 4rem);
+    line-height: 1.12;
+    max-width: 18ch;
+    color: var(--ink);
+}
+.studio-quote .quote-mark {
+    position: absolute;
+    left: -.55em; top: -.15em;
+    font-size: 1.4em;
+    color: var(--copper);
+    font-style: normal;
+}
+.studio-quote-by {
+    margin-top: 1.4rem;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--copper);
+}
+
+.studio-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+}
+.studio-col:nth-child(2) { padding-top: 4rem; } /* offset voor asymmetrie */
+.studio-col-mark {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    color: var(--copper);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: .6rem;
+    margin-bottom: 1.4rem;
+}
+
+.knowhow { border-top: 1px solid var(--line); }
+.knowhow-item {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-areas: 'num title' 'num desc';
+    column-gap: 2.5rem;
+    padding: 2.6rem 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+}
+.knowhow-item:nth-child(even) { padding-left: 8%; }
+.knowhow-num {
+    grid-area: num;
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: .9;
+    color: var(--copper);
+}
+.knowhow-item h2 { grid-area: title; font-size: clamp(1.6rem, 3.4vw, 2.6rem); margin-bottom: .5rem; }
+.knowhow-item p { grid-area: desc; color: var(--muted); font-weight: 300; max-width: 46ch; }
+
+/* --------------------------------------------------------------------------
+   NIEUWS — krantenopmaak: uitgelicht hoofdartikel + archieflijst
+   -------------------------------------------------------------------------- */
+
+.news-feature-section { padding-top: 3rem; }
+.news-feature {
+    width: min(1200px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    transition: border-color .3s;
+}
+.news-feature:hover { border-color: var(--copper); }
+.news-feature-img { overflow: hidden; }
+.news-feature-img img {
+    width: 100%; height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(.2,.6,.2,1);
+}
+.news-feature:hover .news-feature-img img { transform: scale(1.04); }
+.news-feature-body { padding: clamp(2rem, 4vw, 3.5rem); align-self: center; }
+.news-tag {
+    display: inline-block;
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--copper);
+    padding: .3rem .7rem;
+    margin-bottom: 1rem;
+}
+.news-feature-body h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); margin: .4rem 0 1rem; }
+.news-feature-body p { font-weight: 300; color: var(--ink-soft); margin-bottom: 1.4rem; max-width: 42ch; }
+
+.news-archive { padding-top: 1rem; }
+.archive-title {
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    padding-bottom: .8rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: .4rem;
+}
+.news-list-row {
+    display: grid;
+    grid-template-columns: 12rem 1fr 2rem;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    transition: padding-left .3s, background .3s;
+}
+.news-list-row:hover { padding-left: 1.2rem; background: var(--paper-tint); }
+.news-list-date {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--copper);
+}
+.news-list-title { font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.5rem); }
+.news-list-arrow { color: var(--copper); opacity: 0; transition: opacity .3s; }
+.news-list-row:hover .news-list-arrow { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   ARTIKEL (nieuwsbericht) — masthead + full-bleed lead + drop cap
+   -------------------------------------------------------------------------- */
+
+.article-masthead {
+    padding: clamp(8rem, 16vh, 11rem) 0 2.5rem;
+}
+.article-eyebrow {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--copper);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 1.5rem;
+}
+.article-date {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: .8rem;
+}
+.article-title { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; }
+.article-lead-image {
+    width: min(1100px, 94vw);
+    margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+}
+.article-lead-image img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+.rich-text.drop > p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    font-size: 3.6em;
+    float: left;
+    line-height: .78;
+    padding: .04em .12em 0 0;
+    color: var(--copper);
+}
+.article-back { margin-top: 2.5rem; }
+
+/* --------------------------------------------------------------------------
+   SAMENWERKING — 'manifest': twee partijen, groot × en =
+   -------------------------------------------------------------------------- */
+
+.sim-hero {
+    padding: clamp(8rem, 16vh, 11rem) 0 clamp(4rem, 8vw, 6rem);
+}
+.sim-duo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 3rem);
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+.sim-party {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4.5vw, 3.4rem);
+    line-height: 1.05;
+    color: var(--paper);
+}
+.sim-x {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: var(--copper-soft);
+}
+.sim-eq {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    color: var(--copper-soft);
+    margin: 1rem 0 1.5rem;
+}
+.sim-eq span { color: var(--paper); font-style: normal; }
+.sim-hero .lead { color: #b6b1a5; margin-left: auto; margin-right: auto; }
+
+.lead-text p:first-child { font-size: 1.2rem; }
+.sim-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: 2.5rem 0;
+}
+.sim-fields span {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: .5rem 1rem;
+}
+.sim-link { margin-top: 1rem; }
+
+/* --------------------------------------------------------------------------
+   CONTACT — donker typografisch paneel naast het formulier
+   -------------------------------------------------------------------------- */
+
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+.contact-panel {
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    padding: clamp(7rem, 12vh, 9rem) clamp(2rem, 5vw, 5rem) 4rem;
+}
+.contact-panel-inner { width: 100%; max-width: 30rem; }
+.contact-headline {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    color: var(--paper);
+    margin: .4rem 0 1.2rem;
+}
+.contact-intro { color: #b6b1a5; font-weight: 300; margin-bottom: 2.5rem; max-width: 32ch; }
+.contact-lines { border-top: 1px solid var(--line-dark); margin-bottom: 2rem; }
+.contact-line {
+    display: block;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line-dark);
+    color: var(--paper);
+}
+.contact-line-label {
+    display: block;
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--copper-soft);
+    margin-bottom: .3rem;
+}
+.contact-line-value {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    transition: color .25s;
+}
+.contact-line:hover .contact-line-value { color: var(--copper-soft); }
+.contact-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.contact-meta p { font-weight: 300; font-size: .95rem; margin-top: .3rem; color: #cfc9bc; }
+
+.contact-form-wrap {
+    display: flex;
+    align-items: center;
+    padding: clamp(7rem, 12vh, 9rem) clamp(2rem, 5vw, 5rem) 4rem;
+}
+.contact-form-wrap .contact-form { width: 100%; max-width: 34rem; }
+.contact-form-wrap .contact-form h2 { margin-bottom: 1.6rem; }
+
+/* --------------------------------------------------------------------------
+   Responsief — pagina-specifiek
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .studio-cols { grid-template-columns: 1fr; gap: 2.5rem; }
+    .studio-col:nth-child(2) { padding-top: 0; }
+    .news-feature { grid-template-columns: 1fr; }
+    .news-feature-img img { min-height: 240px; aspect-ratio: 16/9; }
+    .contact-split { grid-template-columns: 1fr; min-height: 0; }
+    .contact-panel { padding-top: clamp(6rem, 12vh, 8rem); }
+    .contact-form-wrap { padding-top: clamp(2.5rem, 6vw, 4rem); }
+    .plate, .plate-0, .plate-1, .plate-2 { width: 92vw; margin: 0 auto; }
+    .knowhow-item:nth-child(even) { padding-left: 0; }
+}
+
+@media (max-width: 620px) {
+    .proj-row {
+        grid-template-columns: 2.4rem 1fr 1.4rem;
+        gap: .9rem;
+        row-gap: .3rem;
+    }
+    .proj-row-thumb { display: none; }
+    .proj-row-cat {
+        grid-column: 2;
+        margin-top: .1rem;
+    }
+    .proj-row-arrow { grid-column: 3; grid-row: 1 / 3; }
+    .news-list-row { grid-template-columns: 1fr 1.4rem; row-gap: .3rem; }
+    .news-list-date { grid-column: 1; }
+    .news-list-title { grid-column: 1; }
+    .news-list-arrow { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+    .contact-meta { grid-template-columns: 1fr; }
+    .sim-duo { flex-direction: column; }
+}

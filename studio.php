@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 $pageTitle = 'Studio';
+$bodyClass = 'page-studio';
 require __DIR__ . '/includes/header.php';
 ?>
 
@@ -8,37 +9,40 @@ require __DIR__ . '/includes/header.php';
     <div class="container">
         <p class="kicker">Over ons</p>
         <h1 class="display-xl">Studio Vendrig</h1>
-        <p class="lead">Studio Vendrig cre&euml;ert voor u de juiste omgeving. Studio Vendrig heeft de
-        navolgende knowhow: bouwkunst, bouwtechniek en projectmanagement.</p>
+        <p class="lead">Bouwkundig ontwerp- en tekenstudio &mdash; bouwkunst, bouwtechniek
+        en projectmanagement onder &eacute;&eacute;n dak.</p>
     </div>
 </section>
 
-<section class="section">
-    <div class="container split">
-        <div class="split-label reveal">
-            <p class="kicker">Sinds 2005</p>
-        </div>
-        <div class="split-body reveal">
-            <div class="rich-text">
-                <p><strong>&lsquo;Wij cre&euml;ren de juiste omgeving&rsquo;</strong></p>
+<section class="section studio-statement">
+    <div class="container">
+        <blockquote class="studio-quote reveal">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            Wij cre&euml;ren de juiste omgeving
+        </blockquote>
+        <p class="studio-quote-by reveal">&mdash; Edgar Vendrig, sinds 2005</p>
+    </div>
+</section>
 
+<section class="section studio-body">
+    <div class="container studio-cols">
+        <div class="studio-col reveal">
+            <span class="studio-col-mark">A</span>
+            <div class="rich-text">
                 <p>Sinds 2005 is Edgar Vendrig met Studio Vendrig actief met een bouwkundig
                 ontwerp- en tekenstudio.</p>
 
                 <p>Studio Vendrig heeft zich in de afgelopen 10 jaar ontwikkeld tot een allround studio,
                 waarin ontwerp, engineering en uitvoering onlosmakelijk met elkaar verbonden zijn en de
-                integrale deskundigheid van het bureau vormen.&nbsp;</p>
+                integrale deskundigheid van het bureau vormen.</p>
 
                 <p>De werkzaamheden zijn zeer divers en vari&euml;ren van kleine tot grootschalige projecten,
                 van woningbouw tot gezondheidszorg, van aanbouw/verbouw tot nieuwbouw.</p>
-
-                <p>Studio Vendrig heeft de navolgende knowhow:</p>
-                <ul>
-                    <li>Bouwkunst: voor het ontwerp (exterieur en interieur, zowel in 2D als in 3D)</li>
-                    <li>Bouwtechniek: voor de technische uitwerking (o.a. het digitale tekenwerk)</li>
-                    <li>Projectmanagement: het begeleiden van het gehele bouwproject en bouwproces.</li>
-                </ul>
-
+            </div>
+        </div>
+        <div class="studio-col reveal">
+            <span class="studio-col-mark">B</span>
+            <div class="rich-text">
                 <p>De gehele uitwerking van de opgave gedurende het ontwerp- en uitvoeringproces heeft
                 daarbij als doel om te komen tot een maximale functionele- en belevingskwaliteit voor
                 gebruiker en omgeving. Als wij dan onze visie en ons plezier waarmee wij de opgave
@@ -53,25 +57,23 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<section class="section section-dark">
+<section class="section knowhow">
     <div class="container">
-        <p class="kicker on-dark reveal">Knowhow</p>
-        <div class="diensten-rows">
-            <div class="dienst-row reveal">
-                <span class="dienst-num">01</span>
-                <h3>Bouwkunst</h3>
-                <p>Voor het ontwerp: exterieur en interieur, zowel in 2D als in 3D.</p>
-            </div>
-            <div class="dienst-row reveal">
-                <span class="dienst-num">02</span>
-                <h3>Bouwtechniek</h3>
-                <p>Voor de technische uitwerking, waaronder het digitale tekenwerk.</p>
-            </div>
-            <div class="dienst-row reveal">
-                <span class="dienst-num">03</span>
-                <h3>Projectmanagement</h3>
-                <p>Het begeleiden van het gehele bouwproject en bouwproces.</p>
-            </div>
+        <p class="kicker reveal">Knowhow</p>
+        <div class="knowhow-item reveal">
+            <span class="knowhow-num">01</span>
+            <h2>Bouwkunst</h2>
+            <p>Voor het ontwerp: exterieur en interieur, zowel in 2D als in 3D.</p>
+        </div>
+        <div class="knowhow-item reveal">
+            <span class="knowhow-num">02</span>
+            <h2>Bouwtechniek</h2>
+            <p>Voor de technische uitwerking, waaronder het digitale tekenwerk.</p>
+        </div>
+        <div class="knowhow-item reveal">
+            <span class="knowhow-num">03</span>
+            <h2>Projectmanagement</h2>
+            <p>Het begeleiden van het gehele bouwproject en bouwproces.</p>
         </div>
     </div>
 </section>

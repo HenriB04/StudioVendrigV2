@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 $pageTitle = 'Contact';
+$bodyClass = 'page-contact';
 
 $sent = false;
 $errors = [];
@@ -40,43 +41,41 @@ if (!$isStatic && $_SERVER['REQUEST_METHOD'] === 'POST') {
 require __DIR__ . '/includes/header.php';
 ?>
 
-<section class="page-hero">
-    <div class="container">
-        <p class="kicker">Contact</p>
-        <h1 class="display-xl">Neem contact op</h1>
-        <p class="lead">Wij denken graag met u mee, van initiatief tot en met oplevering.</p>
-    </div>
-</section>
+<section class="contact-split">
+    <aside class="contact-panel">
+        <div class="contact-panel-inner">
+            <p class="kicker on-dark">Contact</p>
+            <h1 class="contact-headline">Laten we<br>kennismaken.</h1>
+            <p class="contact-intro">Wij denken graag met u mee, van initiatief tot en met oplevering.</p>
 
-<section class="section">
-    <div class="container contact-layout">
-        <div class="contact-info">
-            <h2 class="display">Gegevens</h2>
-            <h3>Bezoekadres</h3>
-            <p><?= implode('<br>', array_map('e', CONTACT['bezoekadres'])) ?></p>
-            <h3>Postadres</h3>
-            <p><?= implode('<br>', array_map('e', CONTACT['postadres'])) ?></p>
-            <h3>Bereikbaarheid</h3>
-            <p>
-                <strong>T</strong> <?= e(CONTACT['telefoon']) ?><br>
-                <strong>F</strong> <?= e(CONTACT['fax']) ?><br>
-                <strong>E</strong> <a href="mailto:<?= e(CONTACT['email']) ?>"><?= e(CONTACT['email']) ?></a><br>
-                <strong>W</strong> <?= e(CONTACT['website']) ?>
-            </p>
-            <h3>Diensten</h3>
-            <ul class="footer-list">
-                <?php foreach (DIENSTEN as $i => $dienst): ?>
-                    <li><span class="num">0<?= $i + 1 ?></span> <?= e($dienst) ?></li>
-                <?php endforeach; ?>
-            </ul>
-            <p>
-                <a class="link-arrow" target="_blank" rel="noopener"
-                   href="https://www.google.com/maps/search/?api=1&amp;query=Meidoornkade+22+Houten">
-                   Route plannen
+            <div class="contact-lines">
+                <a class="contact-line" href="tel:<?= e(str_replace(' ', '', CONTACT['telefoon'])) ?>">
+                    <span class="contact-line-label">Telefoon</span>
+                    <span class="contact-line-value"><?= e(CONTACT['telefoon']) ?></span>
                 </a>
-            </p>
-        </div>
+                <a class="contact-line" href="mailto:<?= e(CONTACT['email']) ?>">
+                    <span class="contact-line-label">E-mail</span>
+                    <span class="contact-line-value"><?= e(CONTACT['email']) ?></span>
+                </a>
+            </div>
 
+            <div class="contact-meta">
+                <div>
+                    <span class="contact-line-label">Bezoekadres</span>
+                    <p><?= implode('<br>', array_map('e', CONTACT['bezoekadres'])) ?></p>
+                </div>
+                <div>
+                    <span class="contact-line-label">Postadres</span>
+                    <p><?= implode('<br>', array_map('e', CONTACT['postadres'])) ?></p>
+                </div>
+            </div>
+
+            <p><a class="link-arrow on-dark" target="_blank" rel="noopener"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Meidoornkade+22+Houten">Route plannen</a></p>
+        </div>
+    </aside>
+
+    <div class="contact-form-wrap">
         <div class="contact-form">
             <h2 class="display">Stuur een bericht</h2>
             <?php if ($isStatic): ?>
