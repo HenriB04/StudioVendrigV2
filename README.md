@@ -9,10 +9,10 @@ van de originele website.
 Vereist: PHP (staat op deze machine in `C:\php`).
 
 ```
-C:\php\php.exe -S localhost:8010 -t C:\StudioVendrigV2
+C:\php\php.exe -S localhost:8020 -t C:\StudioVendrigV2
 ```
 
-Open daarna in de browser: **http://localhost:8010**
+Open daarna in de browser: **http://localhost:8020**
 
 Stoppen: `Ctrl+C` in het terminalvenster.
 

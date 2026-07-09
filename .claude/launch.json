@@ -4,8 +4,8 @@
     {
       "name": "studiovendrig-v2",
       "runtimeExecutable": "C:\\php\\php.exe",
-      "runtimeArgs": ["-S", "localhost:8010", "-t", "C:\\StudioVendrigV2"],
-      "port": 8010
+      "runtimeArgs": ["-S", "localhost:8020", "-t", "C:\\StudioVendrigV2"],
+      "port": 8020
     }
   ]
 }
