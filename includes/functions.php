@@ -16,7 +16,7 @@ const CONTACT = [
     'website'     => 'www.studiovendrig.nl',
 ];
 
-const DIENSTEN = ['Bouwkunst', 'Bouwtechniek', 'Projectmanagment'];
+const DIENSTEN = ['Bouwkunst', 'Bouwtechniek', 'Projectmanagement'];
 
 const NAV = [
     'index.php'        => 'Home',

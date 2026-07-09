@@ -28,7 +28,7 @@ require __DIR__ . '/includes/header.php';
             bouwvraagstuk, maar ook het verlengstuk van kleine bureaus die een groot project wil
             realiseren zonder direct te groeien.</p>
 
-            <p>Door het uitgebreide netwerk bied SIM de mogelijkheid snel te ondersteunen op het
+            <p>Door het uitgebreide netwerk biedt SIM de mogelijkheid snel te ondersteunen op het
             gebied van bouwtechniek, constructies, detaillering, materialen, bouwfysica, bouwkosten
             en bouwwetgeving. Desgewenst kan SIM voor U alles in een totaal opdracht verzorgen.
             Geen wirwar van verschillende adviseurs in het begintraject, maar een evenwichtig,

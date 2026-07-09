@@ -18,7 +18,7 @@ require __DIR__ . '/includes/header.php';
     <div class="container">
         <blockquote class="studio-quote reveal">
             <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-            Wij cre&euml;ren de juiste omgeving
+            Wij cre&euml;ren de juiste omgeving&rdquo;
         </blockquote>
         <p class="studio-quote-by reveal">&mdash; Edgar Vendrig, sinds 2005</p>
     </div>

@@ -8,11 +8,11 @@ return array (
     'category' => 'Woningbouw',
     'description' => '<p><b>Projectinfo:</b></p>
 <p><b>Naam &amp; Locatie:</b></p>
-<p>Uitbereiding en grootschalige verbouwing van een stadboerderij te Woerden</p>
+<p>Uitbreiding en grootschalige verbouwing van een stadsboerderij te Woerden</p>
 <p><b>Soort:</b></p>
 <p>Luxe woningbouw, totale verbouwing</p>
 <p><b>Omschrijving:</b></p>
-<p>Met grote zorg is deze stadboerderij geheel vernieuwd. De woning is zowel exterieur en interieur geheel vernieuwd. Onder de woning is een kelder van 160 m2 als extra volume toegevoegd.</p>
+<p>Met grote zorg is deze stadsboerderij geheel vernieuwd. De woning is zowel exterieur en interieur geheel vernieuwd. Onder de woning is een kelder van 160 m2 als extra volume toegevoegd.</p>
 <p><b>Opdrachtgever:</b></p>
 <p>N.N.</p>
 <p><b>Activiteiten:</b></p>
@@ -54,7 +54,7 @@ return array (
   1 => 
   array (
     'id' => 1,
-    'title' => 'Uitbereiding woonhuis aan de Hofdijk te Montfoort',
+    'title' => 'Uitbreiding woonhuis aan de Hofdijk te Montfoort',
     'category' => 'Woningbouw',
     'description' => '<p><b><span style="text-decoration: underline;">Projectinfo:</span></b></p>
 <p><b>Naam &amp; Locatie:</b></p>
@@ -62,7 +62,7 @@ return array (
 <p><b>Soort:</b></p>
 <p>Verbouw en uitbreiding woning</p>
 <p><b>Omschrijving:</b></p>
-<p>Moderne strak vormgegeven uitbereiding. De woning is zeer stijlvol ingericht en de &nbsp;overgang tussen&nbsp; binnen en buiten loopt strak over. Kenmerkend en een fraai detail is dat de schuifpuiconstructie de hoek is omgezet met een &lsquo;open&rsquo; glashoek.</p>
+<p>Moderne strak vormgegeven uitbreiding. De woning is zeer stijlvol ingericht en de &nbsp;overgang tussen&nbsp; binnen en buiten loopt strak over. Kenmerkend en een fraai detail is dat de schuifpuiconstructie de hoek is omgezet met een &lsquo;open&rsquo; glashoek.</p>
 <p><b>Opdrachtgever</b></p>
 <p>Fam. Wammes</p>
 <p><b>Activiteiten</b></p>
@@ -109,7 +109,7 @@ return array (
 <p><b>Soort:</b></p>
 <p>Nieuwbouw woning</p>
 <p><b>Omschrijving:</b></p>
-<p>Langs de Hollandse IJssel van Montfoort, is deze rietgedekte woning gerealiseerd. De woonkamer en woonkeuken hebben optimal uitzicht over de Hollandse Ijssel. De veranda zorgt ervoor dat je op vrijwel alle momenten buiten kunt zitten en kan genieten van het buitenleven. Kenmerkend voor dit project zijn de talrijke mooie en duurzame materialen die zijn toegepast. Bij de woning is er tevens een bijgebouw gerealiseerd helemaal in de lijn van de ontwerpstijl van de woning.</p>
+<p>Langs de Hollandse IJssel van Montfoort, is deze rietgedekte woning gerealiseerd. De woonkamer en woonkeuken hebben optimaal uitzicht over de Hollandse IJssel. De veranda zorgt ervoor dat je op vrijwel alle momenten buiten kunt zitten en kan genieten van het buitenleven. Kenmerkend voor dit project zijn de talrijke mooie en duurzame materialen die zijn toegepast. Bij de woning is er tevens een bijgebouw gerealiseerd helemaal in de lijn van de ontwerpstijl van de woning.</p>
 <p><b>Opdrachtgever:</b></p>
 <p>N.N.</p>
 <p><b>Activiteiten:</b></p>
@@ -157,7 +157,7 @@ return array (
 <p><b>Soort:</b></p>
 <p>Nieuwbouw woning</p>
 <p><b>Omschrijving:</b></p>
-<p>Op een unieke locatie in Montfoort, gelegen aan de gracht, is deze authentieke woning met kelder geraliseerd. Kenmerkend voor dit project zijn de authentieke details en de prachtige zichtlocatie.</p>
+<p>Op een unieke locatie in Montfoort, gelegen aan de gracht, is deze authentieke woning met kelder gerealiseerd. Kenmerkend voor dit project zijn de authentieke details en de prachtige zichtlocatie.</p>
 <p><b>Opdrachtgever:</b></p>
 <p>N.N.</p>
 <p><b>Activiteiten:</b></p>
@@ -195,7 +195,7 @@ return array (
     'category' => 'Woningbouw',
     'description' => '<p><b>Projectinfo:</b></p>
 <p><b>Naam &amp; Locatie:</b></p>
-<p>Nieuwbouw woonhuis te Nieuwekerk ad IJssel</p>
+<p>Nieuwbouw woonhuis te Nieuwerkerk ad IJssel</p>
 <p><b>Soort:</b></p>
 <p>Nieuwbouw woning</p>
 <p><b>Omschrijving:</b></p>
@@ -471,7 +471,7 @@ return array (
       2 => 
       array (
         'file' => 'assets/img/projects/16/3.jpg',
-        'name' => 'Prengtatiebord',
+        'name' => 'Presentatiebord',
       ),
       3 => 
       array (
@@ -506,7 +506,7 @@ return array (
       0 => 
       array (
         'file' => 'assets/img/projects/6/1.jpg',
-        'name' => 'Xijgevel = voorgevel',
+        'name' => 'Zijgevel = voorgevel',
       ),
       1 => 
       array (
@@ -528,15 +528,15 @@ return array (
   13 => 
   array (
     'id' => 7,
-    'title' => 'Uitbereiding bouwmarkt Fixet Jongeneel',
+    'title' => 'Uitbreiding bouwmarkt Fixet Jongeneel',
     'category' => 'Utiliteitsbouw',
     'description' => '<p><b><span>Projectinfo:</span></b></p>
 <p><b>Naam &amp; Locatie:</b></p>
-<p>Uitbereiding Fixet Jongeneel Tasveld te Montfoort</p>
+<p>Uitbreiding Fixet Jongeneel Tasveld te Montfoort</p>
 <p><b>Soort:</b></p>
-<p>Uitbereiding bedrijfspand</p>
+<p>Uitbreiding bedrijfspand</p>
 <p><b>Omschrijving:</b></p>
-<p>Uitbreiding van een bestaand bedrijfspand met een mooie showroom. De uitbereiding is gelegen langs een doorgaande weg en de glazen op de verdieping laat de producten die in deze bouwmarkt worden verkocht goed zien.</p>
+<p>Uitbreiding van een bestaand bedrijfspand met een mooie showroom. De uitbreiding is gelegen langs een doorgaande weg en de glazen op de verdieping laat de producten die in deze bouwmarkt worden verkocht goed zien.</p>
 <p><b>Opdrachtgever:</b></p>
 <p>Fixet Jongeneel</p>
 <p><b>Activiteiten:</b></p>
@@ -569,7 +569,7 @@ return array (
 <p><b>Soort:</b></p>
 <p>Renovatie bedrijfspand</p>
 <p><b>Omschrijving:</b></p>
-<p>Herindeling van een authentieke bedrijfshal. er is een nieuwe indeling gekomen en de gehel voorgevel is gerenoveerd. er is een grote glazen gevel ingekomen waardoor we het pand in kunnen kijken.</p>
+<p>Herindeling van een authentieke bedrijfshal. er is een nieuwe indeling gekomen en de gehele voorgevel is gerenoveerd. er is een grote glazen gevel ingekomen waardoor we het pand in kunnen kijken.</p>
 <p><b>Opdrachtgever:</b></p>
 <p>Auto XL</p>
 <p><b>Activiteiten:</b></p>
