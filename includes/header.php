@@ -17,9 +17,8 @@
 <header class="site-header" id="siteHeader">
     <div class="header-inner">
         <a class="brand" href="index.php">
-            <span class="brand-mark"></span>
             <span class="brand-text">
-                <span class="brand-name">Studio Vendrig</span>
+                <span class="brand-name logo-word">Studio <em>Vendrig</em></span>
                 <span class="brand-sub">architectuur &amp; bouwtechniek</span>
             </span>
         </a>
