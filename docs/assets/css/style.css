@@ -5,15 +5,16 @@
    ========================================================================== */
 
 :root {
-    --ink:        #1c1b18;   /* houtskool */
-    --ink-soft:   #2a2925;
+    --ink:        #231e17;   /* warme houtskool — tekst & koppen */
+    --ink-soft:   #322a20;
+    --espresso:   #3f372d;   /* donkere vlakken — warm espressobruin (uit V6) */
     --paper:      #f5f2ec;   /* warm papier */
     --paper-tint: #ebe6dc;
     --copper:     #b06c3b;   /* accent */
     --copper-soft:#c98a58;
     --muted:      #7d786d;
     --line:       #d8d2c4;
-    --line-dark:  #3d3b35;
+    --line-dark:  #554a3c;   /* scheidingslijnen op donkere vlakken */
     --font-display: 'Fraunces', Georgia, serif;
     --font-body:    'Manrope', 'Segoe UI', sans-serif;
 }
@@ -86,7 +87,7 @@ h1, h2, h3, .display, .display-xl {
 .section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 
 .section-dark {
-    background: var(--ink);
+    background: var(--espresso);
     color: var(--paper);
 }
 .section-tint { background: var(--paper-tint); }
@@ -240,7 +241,7 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
     display: flex;
     align-items: flex-end;
     color: #fff;
-    background: var(--ink);
+    background: var(--espresso);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -561,7 +562,7 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
    -------------------------------------------------------------------------- */
 
 .cta-band {
-    background: var(--ink);
+    background: var(--espresso);
     color: var(--paper);
     padding: clamp(4.5rem, 9vw, 7rem) 0;
 }
@@ -627,7 +628,7 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
    -------------------------------------------------------------------------- */
 
 .site-footer {
-    background: var(--ink);
+    background: var(--espresso);
     color: #b6b1a5;
     padding: clamp(3.5rem, 7vw, 5.5rem) 0 0;
 }
@@ -759,7 +760,7 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
     .main-nav {
         position: fixed;
         inset: 0;
-        background: var(--ink);
+        background: var(--espresso);
         display: none;
         align-items: center;
         justify-content: center;
@@ -1151,7 +1152,7 @@ body.has-dark-hero .site-header:not(.is-scrolled) .nav-toggle span { background:
     min-height: 100vh;
 }
 .contact-panel {
-    background: var(--ink);
+    background: var(--espresso);
     color: var(--paper);
     display: flex;
     align-items: center;
